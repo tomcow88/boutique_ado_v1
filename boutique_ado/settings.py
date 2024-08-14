@@ -25,14 +25,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(%r+q$zgw6=4)z-bcrd_!rxxl8xpsny*!wy*^pfqmp)nrnas8('
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-tomcow88-boutiqueadov1-h1p0zrxtrc3.ws-eu115.gitpod.io',
-    '8000-tomcow88-boutiqueadov1-uiutef0p59q.ws-eu115.gitpod.io'
+    '.gitpod.io',
     ]
 
 
@@ -50,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
-    'products'
+    'products',
+    'bag',
 ]
 
 MIDDLEWARE = [
