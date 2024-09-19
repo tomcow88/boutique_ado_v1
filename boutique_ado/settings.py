@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '.codeinstitute-ide.net',
+    '.herokuapp.com',
+    'localhost',
     ]
 
 
